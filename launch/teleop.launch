@@ -1,0 +1,11 @@
+<launch>
+
+	<node name="stage" pkg="stage_ros" type="stageros" args="/home/captain/catkin_ws/src/simstage_group_four/worlds/rooms.world" output="screen">
+		<remap from="cmd_vel" to="billy/cmd_vel"/>
+	</node>
+	<node name="controller" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
+		<remap from="cmd_vel" to="billy/cmd_vel"/>	
+
+	</node>
+
+</launch>

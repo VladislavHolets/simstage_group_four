@@ -210,5 +210,6 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(reactive_navigation src/reactive_navigation.cpp)
+add_executable(reactive_navigation src/main.cpp include/reactive_controller.cpp include/reactive_controller.h include/obstacle_distance.cpp include/obstacle_distance.h)
+#include/obstacle_distance.cpp include/obstacle_distance.h
 target_link_libraries(reactive_navigation ${catkin_LIBRARIES})

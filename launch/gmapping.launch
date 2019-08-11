@@ -1,0 +1,9 @@
+<launch>
+	<node name="rviz" pkg="rviz" type="rviz" args=" -d /home/captain/catkin_ws/src/simstage_group_four/configs/config.rviz"/>
+	<node name="mapper" pkg="gmapping" type="slam_gmapping" output="screen">
+		<remap from="scan" to="base_scan"/>
+	</node>
+    <node name="screen_recorder" pkg="simstage_group_four" type="screenRecording.sh"  output="screen"/>
+
+
+</launch>
